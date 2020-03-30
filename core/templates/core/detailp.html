@@ -1,0 +1,22 @@
+<a href={% url 'core:index' %}>Home</a>
+{% if user.is_authenticated %}
+    <a href={% url 'core:logout' %}>Logout</a>
+    <a href={% url 'core:account' %}>Profile</a>
+{% else %}
+    <a href={% url 'core:login' %}>Login</a>
+{% endif %} 
+<h1>{{dic.Name}}</h1>
+<ul>
+    {% for cre in dic.preview_set.all  %}
+    <li>
+        {{cre.review_text}}.
+        <br> Author :
+        {% if cre.is_ano %}
+            Anonymous
+        {% else %}
+            {{cre.author.username}}
+        {% endif %}    
+    </li>
+    {% endfor %}
+</ul>
+<a href={% url 'core:noicep' dic.pk %}>Add a review</a>

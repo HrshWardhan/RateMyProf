@@ -1,0 +1,7 @@
+<a href={% url 'core:index' %}>Home</a>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="button">Login</button>
+</form>
+<a href={% url 'core:reg' %}>Register</a>

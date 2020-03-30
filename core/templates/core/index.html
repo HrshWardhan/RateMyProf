@@ -1,0 +1,32 @@
+{% if user.is_authenticated %}
+    <a href={% url 'core:logout' %}>Logout</a>
+    <a href={% url 'core:account' %}>Profile</a>
+{% else %}
+    <a href={% url 'core:login' %}>Login</a>
+{% endif %}       
+
+<h1>Courses</h1>
+{% if course_list %}
+    <ul>
+            {% for i in course_list %}
+                <li>
+                    <a href="{% url 'core:detailc' i.id %}">{{i.Name}}</a>
+                </li>
+            {% endfor %}        
+    </ul>            
+{% else %}
+    <p> No Course Found</p>  
+{% endif %}
+
+<h1>Professor</h1>
+{% if prof_list %}
+    <ul>
+            {% for i in prof_list %}
+                <li>
+                    <a href="{% url 'core:detailp' i.id %}">{{i.Name}}</a>
+                </li>
+            {% endfor %}        
+    </ul>            
+{% else %}
+    <p> No Professor Found</p>  
+{% endif %}

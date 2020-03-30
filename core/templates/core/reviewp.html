@@ -1,0 +1,15 @@
+<a href={% url 'core:index' %}>Home</a>
+<h1>{{Professor.Name}}</h1>
+{% if error_message %}
+<p><strong>Error Message</strong>></p>
+{% endif %}
+
+<form action="{% url 'core:reviewp' Professor.pk %}" method="post">
+    {% csrf_token %}
+    <input type="text" name = "re1"/>
+    <input type = "submit" value="Submit" />
+    <input type="checkbox" id="ano" name="ano" value="anonymous">
+    <label for="anonymous">Post Anonymously </label><br>
+</form>    
+
+    
