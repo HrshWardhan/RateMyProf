@@ -7,6 +7,14 @@ from django.shortcuts import get_object_or_404
 from .models import CReview,PReview,Course,Professor
 from django.contrib.auth.forms import UserCreationForm
 
+#https://www.ling.upenn.edu/courses/Spring_2003/ling538/Lecnotes/ADfn1.htm
+#https://www.d.umn.edu/~gshute/logic/barrel-shifter.xhtml
+#A common usage of a barrel shifter is in the hardware implementation of floating-point arithmetic. For a floating-point add or subtract operation, the significands of the two numbers must be aligned, which requires shifting the smaller number to the right, increasing its exponent, until it matches the exponent of the larger number. This is done by subtracting the exponents and using the barrel shifter to shift the smaller number to the right by the difference, in one cycle. If a simple shifter were used, shifting by n bit positions would require n clock cycles.
+#A Java applet which simulates a barrel-shifter - https://tams.informatik.uni-hamburg.de/applets/hades/webdemos/10-gates/60-barrel/shifter8.html
+#https://iitd-plos.github.io/col718/ref/arm-instructionset.pdf
+#https://developer.arm.com/docs/ddi0210/c/introduction/instruction-set-summary/arm-instruction-summary
+#https://e-vent.mit.edu/
+
 def account(request):
     return render(request, 'core/profile.html',{'user':request.user})
 
