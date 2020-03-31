@@ -1,0 +1,43 @@
+1.In a computer network, computers are connected to a router which just acts as a middle
+point for all computers connected to. Then these routers are interconnected to each other
+thus expanding the network. The routers can be connected to modems which enable them
+to use telephone lines to reach across the globe. To connect to the internet we need to
+connect to a router which is connected to the big network. This service is provided by ISPs
+for a small fees.
+In a network, computer use various set of rules called protocols, to communicate. These
+serve various functions. Each computer has a unique IP address through which it can be
+accessed. Data is transformed after dividing it into small fractions called packets. TCP and
+UDP are two protocols which handle these packets. TCP guarantees that all packets reach
+the destination and are properly arranged so useful for eg. sharing images. UDP does not
+guarantee this and just delivers packets as the come. UDP is use where it is preferable to
+drop the packet rather than to wait for it to come later if it fails to come in first try, eg.
+Real-time systems.
+Proxy servers act as a intermediary server. Proxy server evaluates the request as a way to
+simplify and control its complexity. It can also serve many other functions such as
+monitoring, error correction, authentication, etc..
+World Wide Web is a collection of a huge number of documents and resources which can
+accessed via internet. We need a software called web browser to see these documents and
+
+1resources. To access a file we need IP address of the server it is stored on. IP addresses are
+difficult so we use URLs which are easier to remember. URL of a resource is linked to its IP
+address through Domain Name System (DNS). DNS servers store database of URLs and IP
+addresses. HTTP is a protocol that dictates how info is shared through web pages.
+Q1. When we enter a URL and press enter, the browser first gets the IP address using the
+DNS. Then after reaching to the server, it initiates a TCP connection. After that it makes an
+HTTP request for the site, and receives it in form of HTTP response and then displays us the
+HTML view of the page.
+Q2 and Q4. We can set up a local server on our computer and serves the Local network
+only. This can be done easily using third-party utilities like Apache or python can also be
+used. Other machines can easily the page using IP address of the server. A mobile device
+using mobile data can’t access this since it not the part of the LAN being served.
+Q3. Apache and NginX are open source web server softwares. Together they serve about
+50% of the internet.
+
+2.Since data regarding professors is highly structured thus it would be optimum to use a Relational database mamgement system  Since going with SQL based database would be optimum choice.Where professor would be an independednt entity having subtables for there projects and research projects.
+
+3 JavaScript's setTimeout() and setInterval() are evil and not precise:
+Both functions have a delay of a varying quantity of milliseconds.
+Both functions are very resource-intensive because they execute several times every second.
+A new alternative is window.requestAnimationFrame(), which is less resource-intensive, disabled on page blur, and does not slow down other stuff. This makes it the perfect substitute for a modern setTimeout() and setInterval().These functions use requestAnimationframe() to check if the time has passed based on the elapsed Time calculated from Date.now(). The time passed is more precise than the native functions and theoretically less resource-intensive. Another advantage (or disadvantage) is that the functions are not executed on page blur.
+
+As time of information retrivel is critical in data attacks to know weather data is stored in cache or memory these services are degraded to make such attempts more hard.
