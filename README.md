@@ -1,5 +1,6 @@
 # RateMyProf
 Python 3.7.5 used 
+http://127.0.0.1:8000/ratemyprof/
 Has independent classes of Professor ,Courses and users and review type objects which are assigned to the entity
 regarding which review if given.
 For admin Django - Admin is utilized 
